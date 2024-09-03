@@ -1,0 +1,13 @@
+{
+  "appRunning": "REST SERVER IS RUNNING",
+  "requiredParam": "$param is required",
+  "success": "Operation done successfully",
+  "failure": "Operation failed with error",
+  "dbConnectionError": "Could not connect to database",
+  "emailDuplicate": "Email already exist in the system",
+  "emailValidationError": "Invalid email address",
+  "retriveDataError": "Unable to retrieve $param",
+  "usernameOrPasswordIncorrect": "These credentials do not match our records",
+  "usernameAndPasswordRequiered": "Username and password are required",
+  "authenticationError": "Not authenticated"
+}
