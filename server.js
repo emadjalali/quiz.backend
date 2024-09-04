@@ -12,7 +12,7 @@ let options = {
 
 let httpServer = tls.createServer({
   key: fs.readFileSync('./privkey.pem'),
-  cert: fs.readFileSync('./fullchain.pem'),
+  cert: fs.readFileSync('./cert.pem'),
 });
 let agServer = socketClusterServer.attach(httpServer, options);
 
