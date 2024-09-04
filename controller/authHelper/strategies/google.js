@@ -8,9 +8,9 @@ const User = require('../../../businessLayer/userBL');
 
 const strategy = (app) => {
   const strategyOptions = {
-    clientID: '85100200478-0v0n08kp4h9sd6o9825a37vulu9chn9i.apps.googleusercontent.com', // process.env.GOOGLE_CLIENT_ID,
-    clientSecret: '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', // process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: `http://danestito.com/api/google/callback`,
+    clientID: '326653388022-61r0qdpb9o11iil901l4t6pkojifelou.apps.googleusercontent.com', // process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET, // process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: `https://danemy.com/api/google/callback`,
     passReqToCallback: true,
   };
 
