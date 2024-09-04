@@ -2,6 +2,7 @@ const app = require('./app');
 const socketClusterServer = require('socketcluster-server');
 const http = require('http');
 const fs = require('fs');
+const tls = require('tls');
 
 const port = process.env.PORT || 3500;
 let options = {
@@ -9,7 +10,7 @@ let options = {
   // ...
 };
 
-let httpServer = http.createServer({
+let httpServer = tls.createServer({
   key: fs.readFileSync('./privkey.pem'),
   cert: fs.readFileSync('./fullchain.pem'),
 });
