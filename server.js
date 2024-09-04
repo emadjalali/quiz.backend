@@ -11,7 +11,7 @@ let options = {
 
 let httpServer = http.createServer({
   key: fs.readFileSync('/etc/letsencrypt/live/danemy.com/privkey.pem'),
-  cert: fs.readFileSync('/etc/letsencrypt/live/danemy.com/fullchain.pem')
+  cert: fs.readFileSync('/etc/letsencrypt/live/danemy.com/cert.pem')
 });
 let agServer = socketClusterServer.attach(httpServer, options);
 
