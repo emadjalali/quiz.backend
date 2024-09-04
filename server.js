@@ -1,6 +1,7 @@
 const app = require('./app');
 const socketClusterServer = require('socketcluster-server');
 const http = require('http');
+const fs = require('fs');
 
 const port = process.env.PORT || 3500;
 let options = {
@@ -8,7 +9,10 @@ let options = {
   // ...
 };
 
-let httpServer = http.createServer();
+let httpServer = http.createServer({
+  key: fs.readFileSync('/etc/letsencrypt/live/danemy.com/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/danemy.com/fullchain.pem')
+});
 let agServer = socketClusterServer.attach(httpServer, options);
 
 const server = app();
